@@ -38,6 +38,7 @@ public class ProyectoExists2 {
 //        String elemento1 = "update insert <PERSONA>Alexia</PERSONA> into /PLAY/PERSONAE";
 //
 //        servicioXPQS.queryResource("proba.xml", elemento1);
+        //
         //INSERTAR <PERSONA> LLAMADA "SARA" EN TODOS LOS RECURSOS DE LA COLECCIÓN COSAS
         //CUANDO INSERTAMOS EN TODOS LOS RECURSOS DE UNA COLECCIÓN, PUEDE QUE NO AFECTE EL CAMBIO A TODOS
         //YA QUE PUEDE QUE ALGÚN DOCUMENTO NO TENGA ESA RUTA QUE LE ESPECIFICAMOS
@@ -46,42 +47,36 @@ public class ProyectoExists2 {
 //        String elemento2 = "update insert <PERSONA>Sara</PERSONA> into //PERSONAE" ;
 //        
 //        servicioXPQS.query(elemento2);
-//        
+//      //  
         //modificar o <APELLIDO> do empregado que ten por <EMP_NO> o valor 7521  para que pase a apelidarse 'BIEITEZ'
 //        String elemento3 = "update value /EMPLEADOS/EMP_ROW[EMP_NO=7521]/APELLIDO with 'BIEITEZ'";
 //
 //        servicioXPQS.queryResource("empleados.xml", elemento3);
 //       
-        //eliminar o empregado de que ten por <EMP_NO> o valor 7698
+        //ELIMINAR EL EMPLEADO QUE TIENE POR <EMP_NO> EL VALOR 7698
 //        
 //        String elemento4 ="update delete /EMPLEADOS/EMP_ROW[EMP_NO=7698]";
 //        
 //        servicioXPQS.queryResource("empleados.xml", elemento4);
 //        
-        //modificar a <persona> chamada 'pedro'  para que pase a chamarse 'xoan' no documento proba2.xml
-        
+        //MODIFICAR LA  <persona> LLAMADA 'pedro'  PARA QUE SE PASE A LLAMAR 'xoan' EN EL DOCUMENTO proba2.xml
         //MAL cambia los 2?????? 
-//        String elemento5 = "update value /PLAY/PERSONAE[PERSONA = 'pedro']/PERSONA with 'xoan'";
+//        String elemento5 = "update value /PLAY/PERSONAE/PERSONA[text()= 'pedro'] with 'xoan'";
 //        
 //        servicioXPQS.queryResource("proba2.xml",elemento5);
 //        
-        //modificar a <persona> chamada 'luis'  para que pase a chamarse 'xulio' no documento proba.xml
-        
-        
-//
-        //modificar a <persona> chamada 'xoan'  para que pase a chamarse 'sara' en todos oo documentos da coleción 'cousas'
-        
-        
-//
-        //modificar o <nome>  'ana' de do <p id="2">  para que pase a chamarse 'xulia'  no documento proba.xml
-        
-        
-        
-        
-        
-        
-        
-        
+        //MODIFICAR LA <persona> LLAMADA 'luis'  PARA QUE PASE A LLAMARSE 'xulio' EN EL DOCUMENTO proba.xml
+//        
+//        String elemento6 = "update value //PERSONAE/PERSONA[text() = 'luis'] with 'xulio'";
+//        
+//        servicioXPQS.queryResource("proba.xml", elemento6);
+        //MODIFICAR LA <persona> LLAMADA 'xoan' PARA QUE PASE A LLAMARSE 'sara' EN TODOS LOS DOCUMENTOS DE LA COLECCIÓN 'cousas'
+//        String elemento7 = "update value //PERSONAE/PERSONA[text() = 'xoan'] with 'sara'";
+//        servicioXPQS.query(elemento7);
+        //MODIFICAR EL <nome>  'ana' CON <p id="2">  PARA QUE PASE A LLAMARSE 'xulia' EN EL DOCUMENTO proba.xml
+//        
+//        String elemento8 = "update value /PLAY/fm/p[@id = '2']/nome[text()='ana'] with 'xulia'";
+//        servicioXPQS.queryResource("proba.xml",elemento8);
     }
 
 }
